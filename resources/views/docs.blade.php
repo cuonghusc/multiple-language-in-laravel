@@ -17,8 +17,8 @@
                 <span>@lang('messages.select-language')</span>
                 <input type="hidden" class="current_language" value={{ Session::get('website_language') }}>
                 <div class="btn-group" role="group">
-                    <a href="{!! route('docs.change-language', ['en']) !!}" class="btn-en" >English</a>
-                    <a href="{!! route('docs.change-language', ['vi']) !!}" class="btn-vi" >Vietnam</a>
+                    <a href="{!! route('docs.change-language', ['en']) !!}" class="btn-en" ><img style="width : 20px" src="https://everbtn.com/wp-content/uploads/2019/07/england.png" alt=""></a>
+                    <a href="{!! route('docs.change-language', ['vi']) !!}" class="btn-vi" ><img style="width : 20px" src="https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Vietnam_-_Circle-512.png" alt=""></a>
                 </div>
                 
                 {{-- {{ Session::get('website_language') }} --}}

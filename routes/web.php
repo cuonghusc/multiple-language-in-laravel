@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('locale');
 
 
 Route::group(['prefix' => 'docs','middleware' => 'locale'], function () {
