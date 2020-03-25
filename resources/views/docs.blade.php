@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@lang('messages.title')</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
 </head>
 <body>
     <div class="container">
@@ -16,8 +15,12 @@
             <div class="panel-heading">@lang('messages.title')</div>
             <div class="panel-body">
                 <span>@lang('messages.select-language')</span>
-                <a href="{!! route('docs.change-language', ['en']) !!}" class="btn btn-success">English</a>
-                <a href="{!! route('docs.change-language', ['vi']) !!}" class="btn btn-danger">Vietnam</a>
+                <input type="hidden" class="current_language" value={{ Session::get('website_language') }}>
+                <div class="btn-group" role="group">
+                    <a href="{!! route('docs.change-language', ['en']) !!}" class="btn-en" >English</a>
+                    <a href="{!! route('docs.change-language', ['vi']) !!}" class="btn-vi" >Vietnam</a>
+                </div>
+                
                 {{-- {{ Session::get('website_language') }} --}}
 
                 <h1>@lang('messages.welcome')</h1>
@@ -26,6 +29,7 @@
     </div>    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{{url('/js/custom.js')}}"></script>   
 </body>
 </html>
